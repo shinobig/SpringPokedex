@@ -1,6 +1,5 @@
 package com.pokedemo.shinobig.model;
 
-import com.pokedemo.shinobig.ThreadColor;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -11,7 +10,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class APIconnection {
 

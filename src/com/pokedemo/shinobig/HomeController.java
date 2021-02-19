@@ -7,17 +7,20 @@ import java.util.Map;
 
 @Controller
 public class HomeController {
-AllPokemons allPokemons;
+  AllPokemons allPokemons;
 
-@RequestMapping("/")
-public String showPage(){
-//allPokemons = new AllPokemons();
+  public HomeController(AllPokemons allPokemons) {
+    this.allPokemons = allPokemons;
+  }
 
-  System.out.println("Fetching all pokemon");
+  @RequestMapping("/")
+  public String showPage() {
 
-  return "main-menu";
+    System.out.println("Fetching all pokemon");
+
+    return "main-menu";
 
 
-}
+  }
 
 }
