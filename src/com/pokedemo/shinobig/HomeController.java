@@ -11,7 +11,7 @@ AllPokemons allPokemons;
 
 @RequestMapping("/")
 public String showPage(){
-allPokemons = new AllPokemons();
+//allPokemons = new AllPokemons();
 
   System.out.println("Fetching all pokemon");
 

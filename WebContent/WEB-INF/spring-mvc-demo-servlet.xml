@@ -24,7 +24,15 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-    <bean class="com.pokedemo.shinobig.model.APIconnection" >
+    <bean
+            class="com.pokedemo.shinobig.model.APIconnection"
+    id="pokeApiConnection"
+    >
+
+    </bean>
+
+    <bean id="allPokemon" class="com.pokedemo.shinobig.AllPokemons">
+        <constructor-arg ref="pokeApiConnection" />
 
     </bean>
 
