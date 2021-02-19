@@ -1,6 +1,7 @@
 package com.pokedemo.shinobig;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Map;
@@ -14,9 +15,11 @@ public class HomeController {
   }
 
   @RequestMapping("/")
-  public String showPage() {
+  public String showPage(Model pokemonModel) {
 
     System.out.println("Fetching all pokemon");
+
+    pokemonModel.addAttribute("allPokemons", allPokemons.getAllPokemon());
 
     return "main-menu";
 
