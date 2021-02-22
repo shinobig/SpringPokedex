@@ -19,7 +19,7 @@ public class HomeController {
 
     System.out.println("Fetching all pokemon");
 
-    pokemonModel.addAttribute("allPokemons", allPokemons.getAllPokemon());
+    pokemonModel.addAttribute("allPokemons", allPokemons);
 
     return "main-menu";
 

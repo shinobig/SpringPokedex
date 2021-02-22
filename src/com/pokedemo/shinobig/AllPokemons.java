@@ -11,6 +11,7 @@ public class AllPokemons {
 
 private final APIconnection apIconnection;
 private Map<Integer, Pokemon> allPokemon;
+private String nameTest = "hola";
 
   public AllPokemons(APIconnection apIconnection) {
     this.apIconnection = apIconnection;
@@ -35,5 +36,13 @@ private Map<Integer, Pokemon> allPokemon;
 
   public void setAllPokemon(Map<Integer, Pokemon> allPokemon) {
     this.allPokemon = allPokemon;
+  }
+
+  public String getNameTest() {
+    return nameTest;
+  }
+
+  public void setNameTest(String nameTest) {
+    this.nameTest = nameTest;
   }
 }
