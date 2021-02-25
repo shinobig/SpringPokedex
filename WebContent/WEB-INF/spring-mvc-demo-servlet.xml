@@ -32,6 +32,10 @@
         <constructor-arg ref="pokeApiConnection"/>
     </bean>
 
+    <bean id="allPokemonTest" class="com.pokedemo.shinobig.AllPokemonsTest">
+        <constructor-arg ref="pokeApiConnection"/>
+    </bean>
+
     <bean id="homeController" class="com.pokedemo.shinobig.HomeController">
         <constructor-arg ref="allPokemon"/>
     </bean>
@@ -39,6 +43,7 @@
     <bean id="singlePokemonController" class="com.pokedemo.shinobig.SinglePokemonController">
         <constructor-arg ref="allPokemon"/>
     </bean>
+
 </beans>
 
 

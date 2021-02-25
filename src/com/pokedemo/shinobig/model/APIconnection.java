@@ -19,7 +19,7 @@ public class APIconnection {
 
     try {
 
-      URL url = new URL("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=15");
+      URL url = new URL("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151");
       HttpURLConnection connection = (HttpURLConnection) url.openConnection();
       allMappedPokemon = new LinkedHashMap<>();
       connection.setRequestMethod("GET");

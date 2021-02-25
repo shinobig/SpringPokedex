@@ -24,7 +24,7 @@
         <h3 class="poke-card-title">${pokemon.value.fixedName}</h3>
         <img class="poke-image-holder" src="${pokemon.value.mainImageUrl}" />
         <br>
-        <a class="poke-card-button" href="${pokemon.value.pokemonUrl}">View Pokemon</a>
+        <a class="poke-card-button" href="${pokemon.value.pokemonUrl}">See Pokemon</a>
 
     </div>
 </div>
