@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
+
 <div>
-This is a pokemon card
+<%= request.getParameter("name") %>
 </div>
-</body>
-</html>
