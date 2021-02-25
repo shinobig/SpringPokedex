@@ -35,6 +35,10 @@
     <bean id="homeController" class="com.pokedemo.shinobig.HomeController">
         <constructor-arg ref="allPokemon"/>
     </bean>
+
+    <bean id="singlePokemonController" class="com.pokedemo.shinobig.SinglePokemonController">
+        <constructor-arg ref="allPokemon"/>
+    </bean>
 </beans>
 
 

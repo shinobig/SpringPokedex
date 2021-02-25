@@ -17,11 +17,17 @@ public class Pokemon {
 
   private String name;
   private String mainImageUrl;
+  private String fixedName;
   private String icon;
   private int id;
   private List<String> types;
   private List<String> abilities;
   private String backgroundColor;
+  private String pokemonUrl;
+
+  public String getFixedName() {
+    return fixedName;
+  }
 
   Pokemon(int id, String url, String name) {
 
@@ -60,7 +66,14 @@ public class Pokemon {
       System.out.println("Error getting this pokemon" + e.getMessage());
     }
 
+    this.pokemonUrl = "pokemon?name=" + this.name;
+    this.fixedName = name.substring(0,1).toUpperCase() + name.substring(1);
 
+
+  }
+
+  public String getPokemonUrl() {
+    return pokemonUrl;
   }
 
   private String getImageUrlFromJson(JSONObject object) {
@@ -132,4 +145,15 @@ public class Pokemon {
     this.backgroundColor = backgroundColor;
   }
 
+  public String getIcon() {
+    return icon;
+  }
+
+  public List<String> getTypes() {
+    return types;
+  }
+
+  public List<String> getAbilities() {
+    return abilities;
+  }
 }

@@ -11,7 +11,6 @@ public class AllPokemons {
 
 private final APIconnection apIconnection;
 private Map<Integer, Pokemon> allPokemon;
-private String nameTest = "hola";
 
   public AllPokemons(APIconnection apIconnection) {
     this.apIconnection = apIconnection;
@@ -38,11 +37,21 @@ private String nameTest = "hola";
     this.allPokemon = allPokemon;
   }
 
-  public String getNameTest() {
-    return nameTest;
+
+  public Pokemon getPokemonByName(String name){
+    for(Pokemon pokemon : allPokemon.values()){
+      if (pokemon.getName().equals(name)){
+        return pokemon;
+      }
+    }
+    return null;
   }
 
-  public void setNameTest(String nameTest) {
-    this.nameTest = nameTest;
+  public Pokemon getPokemonById(int id){
+    if(id <= allPokemon.size()){
+    return allPokemon.get(id);
+      }
+    return null;
   }
+
 }
